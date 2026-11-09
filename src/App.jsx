@@ -30,15 +30,15 @@ export default function App() {
       <CustomCursor />
 
       {/* Floating Mode Switcher Button (Top Right Floating Pill) */}
-      <div className="fixed top-20 right-6 z-50 flex items-center gap-2">
+      <div className="fixed top-20 sm:top-24 right-4 sm:right-6 z-50 flex items-center gap-2">
         <button
           onClick={toggleViewMode}
           data-cursor="pointer"
-          className="group flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-amber-500/50 text-amber-300 font-mono text-xs tracking-wider backdrop-blur-xl shadow-[0_0_20px_rgba(255,152,0,0.3)] transition-all"
+          className="group flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2 rounded-full bg-slate-900/95 hover:bg-slate-800 border border-amber-500/50 text-amber-300 font-mono text-[11px] sm:text-xs tracking-wider backdrop-blur-xl shadow-[0_0_20px_rgba(255,152,0,0.3)] transition-all hover:scale-105 active:scale-95"
         >
           {viewMode === 'corridor' ? (
             <>
-              <Layers size={14} className="text-cyan-400" />
+              <Layers size={14} className="text-cyan-400 group-hover:rotate-12 transition-transform" />
               <span>SWITCH TO OVERVIEW FEED</span>
             </>
           ) : (
