@@ -7,5 +7,17 @@ export default defineConfig({
   server: {
     port: 3000,
     open: false
+  },
+  build: {
+    chunkSizeWarningLimit: 900,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ['three'],
+          reactVendor: ['react', 'react-dom'],
+          lucide: ['lucide-react']
+        }
+      }
+    }
   }
 })
